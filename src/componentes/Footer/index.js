@@ -33,3 +33,5 @@ background-color: #292828;
 
         );
 }
+
+export default Footer();
