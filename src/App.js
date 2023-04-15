@@ -5,6 +5,7 @@ import Header from './componentes/Header';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Routes from './Routes';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 
 const AppContainer = styled.div`
@@ -29,6 +30,16 @@ padding-left: 10px;
   <Header/> 
           <Fiap>
             <img src={logo} className="App-logo" alt="logo" />
+            
+    <Link to="/Amanda"><button className="button">Amanda</button></Link>
+
+    <Link to="/Amanda"><button>Daiane</button></Link>
+
+    <Link to="/Amanda"><button>Thais</button></Link>
+
+        <Link to="/Amanda"><button>Cris</button></Link>
+        
+        <Link to="/Amanda"><button>Kevin</button></Link>
           </Fiap>
         
           </AppContainer>

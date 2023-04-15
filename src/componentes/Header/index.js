@@ -1,7 +1,6 @@
 import Logo from "../Logo";
     import styled from "styled-components";
     import OpcoesHeader from "../OpcoesHeader";
-    import Home from './componentes/Home';
 
 
             const Container = styled.header`
@@ -14,7 +13,7 @@ import Logo from "../Logo";
         function Header() {
             return (
             <Container>
-                <Home/>
+            
                 
                 <Logo />
                 <OpcoesHeader />
