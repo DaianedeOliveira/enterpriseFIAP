@@ -1,8 +1,11 @@
+
+
 import React from 'react';
 import styled from 'styled-components';
 import {Button} from '../../assets/commom-components/Button/Button';
 import {Title, Title2} from '../../assets/commom-components/Titles/Title';
 import {Card} from '../../assets/commom-components/Cards/Card';
+import fotoa from '../../assets/commom-components/Imagens/fotoa.svg'
 import {
 	BorderRadiuses,
 	Colors,
@@ -14,84 +17,80 @@ import {
 	FontWeights,
 } from '../../../shared/DesignTokens';
 
-    const Container = styled.div`
-        width: 100%;
-        height: 100%;
-       .banner-apr{
-        width: 100%;
-        height:100%;
-        background: ${Colors.BLACK_450};
-        display: flex;
-        justify-content: space-between;
-        padding: 5% 2%;
-       }
-        img{
-            width: 507px;
-            height:531px;
-            margin: 50px 50px;
-        }
-        .apr{
-            padding: 150px 50px;
-        }
-        .integrantes{
+
+            const Container = styled.div`
             width: 100%;
-            height: 100%;
-            padding: 50px;
-            background:#1E1E1E;
-            justify-content: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+            overflow-x:hidden;
+            
+            .banner-apr{
+                width: 100%;
+            height:100%;
+
+            background: ${Colors.BLACK_450};
+            display: flex;
+            justify-content: space-between;
+            padding: 5% 2%;
         }
-        .linha1{
-           width:100%;
-           height: 285px;
-           display:flex;!important;
-           margin: 25px 0;
-           justify-content: center;
-        }
-        .linha2{
-            width: 100%;
-            height: 285px;
-            margin: 25px 0;
-            display:flex;
-            justify-content: center;
-        }
-        .pontos img{
-            margin: 0;
-            width: 100%;
-            height: 20px;
-        }
-        @media(max-width: 768px){
-            img{
-                display:none;
-            }
-        }
-    `;
-
-function Home(){
-    return (
-    <Container>
-
-        <div class="banner-apr">
-
-        <div class="apr">
-
-        <Title>Apresentação Pessoal</Title>
-
-        <Button>Conheça os Integrantes</Button>
-
-        </div>
-
-        <div>
-        <img src="https://i.imgur.com/PbTeQV0.png"></img>
-
-        </div>
-
-        </div>
-
-        <div> <Title2>Sobre</Title2></div>
+            .Conteudo{
+                height: 500px;
+                background: ${Colors.BLACK_450};
+                padding-top: 50px;
         
-      
-    </Container>
-    );
-}
+            }
+            .Conjunto{
+            margin-left: 180px;
+        
+            }
+        .titulo{
+            margin-right:4em;
+        }
 
-export default Home;
+
+
+                    @media(max-width: 768px){
+                        img{
+                            display:none;
+                        }
+                    }
+            `
+    const Opcao = styled.div`
+    padding-top: 50px;
+    margin-left: 10px;
+    padding-left:2px;
+    text-align: left;
+    max-width: 80%;
+    font-size: 20px;
+    color: ${Colors.NEUTRAL_WHITE};
+    `
+
+    const Imagem = styled.div`
+    float: left;
+    margin-right: 17px;
+    `
+            
+        function Home(){
+            return (
+        <Container>
+        
+            <div className='Conteudo'> <Title2 className='titulo'>Sobre</Title2>
+            <div className='Conjunto'> 
+            <Imagem>
+                <img src={fotoa}/> 
+                </Imagem>
+                
+            <Opcao> <p> 
+                Olá, meu nome é Amanda, tenho 26 anos e moro em São Paulo. Em 2020 migrei da área de atendimento pra área de tecnologia trabalhando por 2 anos como técnica de suporte para notebooks e desktops. Desde o início da minha carreira tenho feito cursos e participado de programas de aceleração para área de desenvolvimento e em 2022 iniciei minha graduação em Sistemas para Internet pela FIAP.</p></Opcao>
+                </div>
+        
+    </div>
+
+        </Container>
+        
+        );
+    }
+
+    export default Home;

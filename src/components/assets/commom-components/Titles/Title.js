@@ -24,17 +24,17 @@ export const Title = styled.h1`
         font-size:${FontSizes.ONE_QUARTER};
     };
 
-`;
-export const Title2 = styled.h2`
-     font-size: ${FontSizes.TWO};
-     color: ${Colors.BLUE_500};
-     font-weight: ${FontWeights.BOLD};
-     text-align: center;
-`;
+    `;
+    export const Title2 = styled.h2`
+        font-size: ${FontSizes.TWO};
+        color: ${Colors.BLUE_500};
+        font-weight: ${FontWeights.BOLD};
+        text-align: center;
+    `;
 
-export const Title3 = styled.h2`
-     font-size: ${FontSizes.ONE_QUARTER};
-     color: ${Colors.BLUE_500};
-     font-weight: ${FontWeights.BOLD};
-     text-align: center;
-`;
+    export const Title3 = styled.h2`
+        font-size: ${FontSizes.ONE_QUARTER};
+        color: ${Colors.BLUE_500};
+        font-weight: ${FontWeights.BOLD};
+        text-align: center;
+    `;

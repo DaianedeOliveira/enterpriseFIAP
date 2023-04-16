@@ -31,7 +31,7 @@ export const Button = styled.button`
         height: 60px;
         font-size: ${FontSizes.ONE};
     };
- 
+
 	&:hover {
 		background-color: ${Colors.BLUE_550};
 	}
