@@ -75,7 +75,6 @@ import {
                     <Card>Amanda</Card>
                     </div>
             
-          
 </div>
                 
         </Container>

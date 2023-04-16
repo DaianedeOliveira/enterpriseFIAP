@@ -5,7 +5,6 @@ import Sobre from './components/pages/Sobre/Sobre';
 import Formacao from './components/pages/Formacao/Formacao';
 import Experiencia from './components/pages/Experiencia/Experiencia';
 import Hobbies from './components/pages/Hobbies/Hobbies';
-import Contato from './components/pages/Contato/Contato';
 import Navbar from './components/static/Navbar';
 import Footer from './components/static/Footer';
 
@@ -22,7 +21,6 @@ export function App() {
         <Route path="/Formacao" element={<Formacao/>}></Route>
         <Route path="/Experiencia" element={<Experiencia/>}></Route>
         <Route path="/Hobbies" element={<Hobbies/>}></Route>
-        <Route path="/Contato" element={<Contato/>}></Route>
       </Routes>
     </BrowserRouter>
 

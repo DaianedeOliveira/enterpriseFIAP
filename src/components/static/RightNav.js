@@ -44,7 +44,6 @@ const RightNav = ({ open }) => {
       <Link to="/Formacao"><li>Formação</li></Link>
       <Link to="/Experiencia"><li>Experiência</li></Link>
       <Link to="/Hobbies"><li>Hobbies</li></Link>
-      <Link to="/Contato"><li>Contato</li></Link>
     </Ul>
   )
 }
