@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import {Button} from '../../assets/commom-components/Button/Button';
 import {Title, Title2} from '../../assets/commom-components/Titles/Title';
 import {Card} from '../../assets/commom-components/Cards/Card';
+import Banner from '../../static/Banner';
 import {
 	BorderRadiuses,
 	Colors,
@@ -31,7 +32,19 @@ import {
             margin: 50px 50px;
         }
         .apr{
+            width: 50%;
             padding: 150px 50px;
+        }
+        .scroll{
+            width:100%;
+            height: 100%;
+            display:flex;
+            justify-content:center;
+            background: ${Colors.BLACK_450}
+        }
+        .scroll img{
+            width:5%;
+            height: 5%;
         }
         .integrantes{
             width: 100%;
@@ -70,22 +83,6 @@ function Home(){
     return (
     <Container>
 
-        <div class="banner-apr">
-
-        <div class="apr">
-
-        <Title>  Apresentação Pessoal</Title>
-
-        <Button>Conheça os Integrantes</Button>
-
-        </div>
-
-        <div>
-        <img src="https://i.imgur.com/PbTeQV0.png"></img>
-
-        </div>
-
-        </div>
 
         <div class="integrantes">
         <div> <Title2>Integrantes</Title2></div>
