@@ -25,6 +25,12 @@ export const Button = styled.button`
 	transition: 200ms all ease;
     letter-spacing: ${FontLetterSpacings.MEDIUM};
 	font-size: ${FontSizes.ONE};
+    @media(max-width:600px){
+        margin-left: 10%; 
+        width: 260px;
+        height: 60px;
+        font-size: ${FontSizes.ONE};
+    };
  
 	&:hover {
 		background-color: ${Colors.BLUE_550};

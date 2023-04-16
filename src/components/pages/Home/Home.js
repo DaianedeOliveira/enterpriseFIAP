@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import {Button} from '../../assets/commom-components/Button/Button';
 import {Title, Title2} from '../../assets/commom-components/Titles/Title';
+import {Card} from '../../assets/commom-components/Cards/Card';
 import {
 	BorderRadiuses,
 	Colors,
@@ -18,10 +19,11 @@ import {
         height: 100%;
        .banner-apr{
         width: 100%;
+        height:100%;
         background: ${Colors.BLACK_450};
         display: flex;
         justify-content: space-between;
-        padding: 150px 50px;
+        padding: 5% 2%;
        }
         img{
             width: 507px;
@@ -33,21 +35,29 @@ import {
         }
         .integrantes{
             width: 100%;
-            height: 800px;
+            height: 100%;
             padding: 50px;
             background:#1E1E1E;
             justify-content: center;
         }
         .linha1{
            width:100%;
+           height: 285px;
            display:flex;!important;
-           justify-content: space-around;
-           margin: 100px 50px;
+           margin: 25px 0;
+           justify-content: center;
         }
         .linha2{
             width: 100%;
+            height: 285px;
+            margin: 25px 0;
             display:flex;
-            justify-content: space-around;
+            justify-content: center;
+        }
+        .pontos img{
+            margin: 0;
+            width: 100%;
+            height: 20px;
         }
         @media(max-width: 768px){
             img{
@@ -56,17 +66,6 @@ import {
         }
     `;
 
-//     const Button = styled.button`
-//     display: inline-block;
-//     color: #fff;
-//     font-size: 1em;
-//     margin: 50px;
-//     padding: 0.5em 2em;
-//     border: 2px solid #90C2E7;
-//     border-radius: 25px;
-//     background: #292828!important;
-//     display: block;
-//   `;
 function Home(){
     return (
     <Container>
@@ -91,14 +90,19 @@ function Home(){
         <div class="integrantes">
         <div> <Title2>Integrantes</Title2></div>
             <div class="linha1">
-                
-            <div class="card1">Amanda</div>
-            <div class="card1">Cristina</div>
-            <div class="card1">Daiane</div>
+                <Card>Amanda</Card>
+                <Card>Cristina</Card>
+                <Card>Daiane</Card>
+           
             </div>
             <div class="linha2">
-                <div>Kevin</div>
-                <div>Thais</div>
+                <Card>Kevin</Card>
+                <Card>Thais</Card>
+
+        </div>
+        <div class="pontos">
+
+        <img src="https://i.imgur.com/Knal5Sh.png"></img>
         </div>
             </div>
       

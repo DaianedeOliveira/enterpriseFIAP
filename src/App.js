@@ -4,6 +4,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import { NormalizeStyles } from './shared/NormalizeStyles';
 import Home from './components/pages/Home/Home';
 import Navbar from './components/static/Navbar';
+import Footer from './components/static/Footer';
 
 export function App() {
   return (
@@ -15,7 +16,9 @@ export function App() {
           <Route path="/" element={<Home/>}>
           </Route>
         </Routes>
-    </BrowserRouter>
+    </BrowserRouter>~
+
+    <Footer/>
     </>
 
   );
