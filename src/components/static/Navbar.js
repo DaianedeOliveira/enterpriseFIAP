@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Burger from './Burguer';
+import { Link } from "react-router-dom";
 import {
 	BorderRadiuses,
 	Colors,
@@ -37,9 +38,11 @@ const Nav = styled.nav`
 const Navbar = () => {
   return (
     <Nav>
-      <div className="logo">
+      <Link to="/">
+        <div className="logo">
         <img src="https://i.imgur.com/yBKbtZy.png"></img>
-      </div>
+        </div>
+      </Link>
       <Burger />
     </Nav>
   )

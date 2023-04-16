@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from "react-router-dom";
 import {
 	BorderRadiuses,
 	Colors,
@@ -39,11 +40,11 @@ const Ul = styled.ul`
 const RightNav = ({ open }) => {
   return (
     <Ul open={open}>
-      <li>Sobre</li>
-      <li>Formação</li>
-      <li>Experiência</li>
-      <li>Hobbies</li>
-      <li>Contato</li>
+      <Link to="/Sobre"><li>Sobre</li></Link>      
+      <Link to="/Formacao"><li>Formação</li></Link>
+      <Link to="/Experiencia"><li>Experiência</li></Link>
+      <Link to="/Hobbies"><li>Hobbies</li></Link>
+      <Link to="/Contato"><li>Contato</li></Link>
     </Ul>
   )
 }
