@@ -88,9 +88,9 @@ function Home(){
     return (
     <Container>
         <Banner/>
-        <div class="integrantes">
+        <div className="integrantes">
         <div> <Title2>Integrantes</Title2></div>
-            <div class="linha1">
+            <div className="linha1">
                 <Card>
                     <Link to="/amanda">Amanda</Link>
                  </Card>
@@ -102,7 +102,7 @@ function Home(){
                 </Card>
            
             </div>
-            <div class="linha2">
+            <div className="linha2">
                 <Card>
                     <Link to="/kevin">Kevin</Link>
                 </Card>
@@ -111,7 +111,7 @@ function Home(){
                 </Card>
 
         </div>
-        <div class="pontos">
+        <div className="pontos">
 
         <img src="https://i.imgur.com/Knal5Sh.png"></img>
         </div>

@@ -132,11 +132,11 @@ function Daiane(){
         <Container>
         <Title2>Sobre</Title2>
 
-        <div class="sobre">
-            <div class="img-sobre">
+        <div className="sobre">
+            <div className="img-sobre">
                 <img src="https://i.imgur.com/UE0J3Ur.png"></img>
             </div>
-            <div class="texto">
+            <div className="texto">
                 <Title4>Daiane</Title4>
                 <p>Olá, meu nome é Daiane, tenho 18 anos e moro em São Paulo. Atualmente sou estudante de Sistemas para Internet na 
                 FIAP. Sou uma pessoa bastante curiosa e adoro aprender coisas novas; uma das coisas que mais gosto de fazer no tempo 
@@ -146,35 +146,35 @@ function Daiane(){
             
         </div>
 
-       <div class="formacao">
+       <div className="formacao">
        <img src="https://i.imgur.com/Knal5Sh.png"></img>
 
-        <div class="linha1">
+        <div className="linha1">
             <Title2>
                 <img src="https://i.imgur.com/pVAj4La.png"></img>
                 Formação
             </Title2>
         </div>
-        <div class="linha2">
+        <div className="linha2">
             <img src="https://i.imgur.com/x46p4eQ.png"></img>
 
 
-             <div class="card1">Formação Daiane</div>
+             <div className="card1">Formação Daiane</div>
 
 
-            <div class="card2">Olá, me chamo Daiane, tenho 18 anos, sou brasileira e me identifico com o gênero feminino. 
+            <div className="card2">Olá, me chamo Daiane, tenho 18 anos, sou brasileira e me identifico com o gênero feminino. 
             Sou apaixonada por tecnologia e tudo o que ela pode proporcionar, por isso, atualmente faço Sistemas para Internet na FIAP. Além disso, tenho como interesse a área de Business Intelligence, pois atualmente faço estágio na área e me encantou tudo que essa área propõe, assim venho participando de eventos na área e  fazendo cursos on-line para me aprimorar, como recentemente, finalizei a formação em PowerBI na Alura. Ademais, um dos meus objetivos é realizar uma pós-graduação em Data Analytics.</div>
 
 </div>
 
        </div>
 
-       <div class="experiencias">
-        <div class="titulo1">
+       <div className="experiencias">
+        <div className="titulo1">
 
         <Title2><img src="https://i.imgur.com/IuD8mKo.png"></img>Experiências<img src="https://i.imgur.com/IuD8mKo.png"></img></Title2>
         </div>
-        <div class="text">
+        <div className="text">
             <ul>
                 <li>Estagiária de Business Intelligence</li>
                 <li> Voluntária no UNICEF Brasil : Em meio à pandemia do novo coronavírus, o UNICEF trabalha com adolescentes e jovens que atuem ativamente nas redes sociais enfrentando notícias falsas e promovendo os direitos de crianças e adolescentes.</li>
@@ -187,11 +187,11 @@ Voluntária no 1Mio: Através do voluntário do UNICEF, eu também participei da
         </div>
        </div>
 
-       <div class="hobbies">
+       <div className="hobbies">
         <Title2>Hobbies</Title2>
 
         <Card3>
-            <div class="card4">
+            <div className="card4">
                 <p>Daiane: Um dos meus hobbies favoritos é ler livros, amo livros de romance, desenvolvimento pessoal e ficção científica, também tenho como hobby desenhar e aprender sobre diferentes culturas. Gosto de assistir sobre viagens e conhecer diferentes lugares.  
 
 </p>

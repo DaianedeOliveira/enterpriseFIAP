@@ -49,9 +49,9 @@ import {
 function Banner (){
     return(
         <Container>
-            <div class="banner-apr">
+            <div className="banner-apr">
 
-<div class="apr">
+<div className="apr">
 
 <Title>  Apresentação Pessoal</Title>
 
@@ -64,7 +64,7 @@ function Banner (){
 
 </div>
 </div>
-<div class="scroll">
+<div className="scroll">
 
 <img src="https://i.imgur.com/ynES8UE.png"></img>
 </div>

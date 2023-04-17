@@ -45,18 +45,18 @@ function Footer(){
         <Title3> Fale Conosco!</Title3>
 
         <div>
-            <p class="texto">Gostou do que viu? </p>
-            <p class="texto">Saiba que nos <b class="texto-azul">empenhamos para realizá-lo</b>!
-            Mas também <b class="texto-azul">gostariamos de te conhecer</b> e quem sabe trocar alguma experiência.
+            <p className="texto">Gostou do que viu? </p>
+            <p className="texto">Saiba que nos <b className="texto-azul">empenhamos para realizá-lo</b>!
+            Mas também <b className="texto-azul">gostariamos de te conhecer</b> e quem sabe trocar alguma experiência.
             Se quiser nos conhecer mais, fique a vontade para usar os canais abaixo:</p>
         </div>
 
-        <div class="imagens">
+        <div className="imagens">
             <img src="https://i.imgur.com/k5CcdSU.png"></img>
             <img src="https://i.imgur.com/jIxDCOb.png"></img>
         </div>
 
-        <div class="pontos">
+        <div className="pontos">
             <img src="https://i.imgur.com/Knal5Sh.png"></img>
         </div>
 
