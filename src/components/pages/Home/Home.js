@@ -1,3 +1,4 @@
+<<<<<<< HEAD
     import React from 'react';
     import styled from 'styled-components';
     import {Button} from '../../assets/commom-components/Button/Button';
@@ -18,6 +19,76 @@
             width: 100%;
             height: 100%;
         .banner-apr{
+=======
+import React from 'react';
+import styled from 'styled-components';
+import {Button} from '../../assets/commom-components/Button/Button';
+import {Title, Title2} from '../../assets/commom-components/Titles/Title';
+import {Card} from '../../assets/commom-components/Cards/Card';
+import Banner from '../../static/Banner';
+import {Link} from 'react-router-dom';
+import {
+	BorderRadiuses,
+	Colors,
+	Shadows,
+	Spaces,
+	FontLetterSpacings,
+	FontFamilies,
+    FontSizes,
+	FontWeights,
+} from '../../../shared/DesignTokens';
+
+    const Container = styled.div`
+        width: 100%;
+        height: 100%;
+       .banner-apr{
+        width: 100%;
+        height:100%;
+        background: ${Colors.BLACK_450};
+        display: flex;
+        justify-content: space-between;
+        padding: 5% 2%;
+       }
+        img{
+            width: 507px;
+            height:531px;
+            margin: 50px 50px;
+        }
+        .apr{
+            width: 50%;
+            padding: 150px 50px;
+        }
+        .scroll{
+            width:100%;
+            height: 100%;
+            display:flex;
+            justify-content:center;
+            background: ${Colors.BLACK_450}
+        }
+        .scroll img{
+            width:5%;
+            height: 5%;
+        }
+        .integrantes{
+            width: 100%;
+            height: 100%;
+            padding: 50px;
+            background:#1E1E1E;
+            justify-content: center;
+        }
+        a{
+            text-decoration:none;
+            color:${Colors.NEUTRAL_WHITE};
+        }
+        .linha1{
+           width:100%;
+           height: 285px;
+           display:flex;!important;
+           margin: 25px 0;
+           justify-content: center;
+        }
+        .linha2{
+>>>>>>> 34d3255341e334587e841b94ca1af4bce7594fe1
             width: 100%;
             height:100%;
             background: ${Colors.BLACK_450};
@@ -69,6 +140,7 @@
 function Home(){
     return (
     <Container>
+<<<<<<< HEAD
 
         <div class="banner-apr">
 
@@ -99,6 +171,36 @@ function Home(){
                     <Card>Kevin</Card>
                     <Card>Thais</Card>
 
+=======
+        <Banner/>
+        <div className="integrantes">
+        <div> <Title2>Integrantes</Title2></div>
+            <div className="linha1">
+                <Card>
+                    <Link to="/amanda">Amanda</Link>
+                 </Card>
+                <Card>
+                    <Link to="/cristina">Cristina</Link>
+                </Card>
+                <Card>
+                    <Link to="/daiane">Daiane</Link>
+                </Card>
+           
+            </div>
+            <div className="linha2">
+                <Card>
+                    <Link to="/kevin">Kevin</Link>
+                </Card>
+                <Card>
+                    <Link to="/thais">Thais</Link>
+                </Card>
+
+        </div>
+        <div className="pontos">
+
+        <img src="https://i.imgur.com/Knal5Sh.png"></img>
+        </div>
+>>>>>>> 34d3255341e334587e841b94ca1af4bce7594fe1
             </div>
             <div class="pontos">
 
