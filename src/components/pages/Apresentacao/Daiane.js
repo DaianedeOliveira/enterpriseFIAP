@@ -134,11 +134,24 @@ axios.defaults.baseURL = "https://viacep.com.br/ws";
 
 function Daiane(){        
     const [cep, setCep] = useState('01001000');
+    const [mostrarEndereco, setMostrarEndereco] = useState(false);
+
+    const ocultarEndereco = () => {
+        setMostrarEndereco(false);
+    };
 
     const [{ data, loading, error}, refetch ] = useAxios(
         "https://viacep.com.br/ws/01001000/json/",
-        { manual: true }
+        { manual: true },
     );
+
+    useEffect(() => {
+        if (data) {
+        setMostrarEndereco(true);
+        console.log(data);
+        console.log(mostrarEndereco);
+        }
+    }, [data]);
 
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error!</p>;
@@ -169,16 +182,24 @@ function Daiane(){
                 
                 <div>        
                 <p>Meu CEP {cep}:</p>      
-                <Button onClick={refetch}>Exibir meu Endereço</Button>
+                
+                </div>
+                <Button onClick={mostrarEndereco ? ocultarEndereco : refetch}>Exibir meu Endereço</Button>
                 {/* <button onClick={refetch}>Exibir meu CEP {cep}</button> */}
                 {/* <pre>{JSON.stringify(data, null, 2)}</pre> */}
-                </div>
-                
+                {mostrarEndereco && (
+                    <div>                    
+                        <div>{data && <p>Logadouro: {data.logradouro}</p>}</div>
+                        <div>{data && <p>Complemento: {data.complemento}</p>}</div>
+                        <div>{data && <p>Cidade: {data.localidade}</p>}</div>
+                        <div>{data && <p>Estado: {data.uf}</p>}</div>
+                    </div>
+                )}
                 {/* <div>{data && <p>Meu CEP: {data.cep}</p>}</div> */}
-                <div>{data && <p>Logadouro: {data.logradouro}</p>}</div>
+                {/* <div>{data && <p>Logadouro: {data.logradouro}</p>}</div>
                 <div>{data && <p>Complemento: {data.complemento}</p>}</div>
                 <div>{data && <p>Cidade: {data.localidade}</p>}</div>
-                <div>{data && <p>Estado: {data.uf}</p>}</div>
+                <div>{data && <p>Estado: {data.uf}</p>}</div> */}
                 {/* <div>{data && <p>{data.ibge}</p>}</div>
                 <div>{data && <p>{data.gia}</p>}</div>
                 <div>{data && <p>{data.ddd}</p>}</div>
