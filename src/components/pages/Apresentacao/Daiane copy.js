@@ -1,10 +1,8 @@
 import { useState, useEffect, React } from "react";
 import styled from "styled-components";
 import {Title2, Title4} from '../../assets/commom-components/Titles/Title';
-import {Button} from '../../assets/commom-components/Button/Button'; 
 import axios from "axios";
-// import useAxios from '../../../hooks/useAxios'
-import useAxios from "axios-hooks";
+import useAxios from '../../../hooks/useAxios'
 import {
 	BorderRadiuses,
 	Colors,
@@ -135,22 +133,19 @@ axios.defaults.baseURL = "https://viacep.com.br/ws";
 function Daiane(){        
     const [cep, setCep] = useState('01001000');
 
-    const [{ data, loading, error}, refetch ] = useAxios(
-        "https://viacep.com.br/ws/01001000/json/",
-        { manual: true }
-    );
+    const { response, loading, error } = useAxios({
+        method: 'get',
+        url: `/${cep}/json/`,
+        headers: JSON.stringify({ accept: '*/*' }),
+    });
+    const [data, setData] = useState([]);
 
-    if (loading) return <p>Loading...</p>;
-    if (error) return <p>Error!</p>;
-
-    // const [data, setData] = useState([]);
-
-    // useEffect(() => {
-    //     if (response !== null) {
-    //         console.log(response);
-    //         setData(response);
-    //     }
-    // }, [response]);
+    useEffect(() => {
+        if (response !== null) {
+            console.log(response);
+            setData(response);
+        }
+    }, [response]);
 
     return(
         <Container>
@@ -166,25 +161,18 @@ function Daiane(){
                 FIAP. Sou uma pessoa bastante curiosa e adoro aprender coisas novas; uma das coisas que mais gosto de fazer no tempo 
                 livre é ler livros, acredito que assim como Platão - filósofo grego da antiguidade - defendia que: 
                 “livros dão alma ao universo, asas para a mente, voo para a imaginação, e vida a tudo”.  </p>
-                
-                <div>        
-                <p>Meu CEP {cep}:</p>      
-                <Button onClick={refetch}>Exibir meu Endereço</Button>
-                {/* <button onClick={refetch}>Exibir meu CEP {cep}</button> */}
-                {/* <pre>{JSON.stringify(data, null, 2)}</pre> */}
-                </div>
-                
-                {/* <div>{data && <p>Meu CEP: {data.cep}</p>}</div> */}
-                <div>{data && <p>Logadouro: {data.logradouro}</p>}</div>
-                <div>{data && <p>Complemento: {data.complemento}</p>}</div>
-                <div>{data && <p>Cidade: {data.localidade}</p>}</div>
-                <div>{data && <p>Estado: {data.uf}</p>}</div>
-                {/* <div>{data && <p>{data.ibge}</p>}</div>
-                <div>{data && <p>{data.gia}</p>}</div>
-                <div>{data && <p>{data.ddd}</p>}</div>
-                <div>{data && <p>{data.siafi}</p>}</div> */}
             </div>
         </div>
+        <div>Esse é meu CEP: {cep}</div>
+        <div>{data && <p>{data.cep}</p>}</div>
+        <div>{data && <p>{data.logradouro}</p>}</div>
+        <div>{data && <p>{data.complemento}</p>}</div>
+        <div>{data && <p>{data.localidade}</p>}</div>
+        <div>{data && <p>{data.uf}</p>}</div>
+        <div>{data && <p>{data.ibge}</p>}</div>
+        <div>{data && <p>{data.gia}</p>}</div>
+        <div>{data && <p>{data.ddd}</p>}</div>
+        <div>{data && <p>{data.siafi}</p>}</div>
 
        <div className="formacao">
        <img src="https://i.imgur.com/Knal5Sh.png"></img>
