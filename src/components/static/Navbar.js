@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Burger from './Burguer';
-import { Link } from "react-router-dom";
+import {Link} from 'react-router-dom';
 import {
 	BorderRadiuses,
 	Colors,
@@ -18,7 +18,7 @@ const Nav = styled.nav`
   height: 120px;
   background-color: ${Colors.BLACK_500};
   color:${Colors.NEUTRAL_WHITE};
-  padding: 15px 150px;
+  padding: 5px 150px;
   font-family:${FontFamilies.PRIMARY};
   font-size:${FontSizes.ONE};
   font-weight:${FontWeights.SEMIBOLD};
@@ -33,19 +33,25 @@ const Nav = styled.nav`
     height: 100px;
     margin: 0 15px;  
   }
+  a{
+    text-decoration: none;
+    color: ${Colors.NEUTRAL_WHITE};
+  }
 `
 
 const Navbar = () => {
   return (
+    
     <Nav>
       <Link to="/">
-        <div className="logo">
+
+      <div className="logo">
         <img src="https://i.imgur.com/yBKbtZy.png"></img>
-        </div>
+      </div>
       </Link>
       <Burger />
     </Nav>
   )
 }
 
-export default Navbar
+export default Navbar;

@@ -4,6 +4,7 @@ import {Button} from '../../assets/commom-components/Button/Button';
 import {Title, Title2} from '../../assets/commom-components/Titles/Title';
 import {Card} from '../../assets/commom-components/Cards/Card';
 import Banner from '../../static/Banner';
+import {Link} from 'react-router-dom';
 import {
 	BorderRadiuses,
 	Colors,
@@ -53,6 +54,10 @@ import {
             background:#1E1E1E;
             justify-content: center;
         }
+        a{
+            text-decoration:none;
+            color:${Colors.NEUTRAL_WHITE};
+        }
         .linha1{
            width:100%;
            height: 285px;
@@ -82,19 +87,28 @@ import {
 function Home(){
     return (
     <Container>
-
-
+        <Banner/>
         <div class="integrantes">
         <div> <Title2>Integrantes</Title2></div>
             <div class="linha1">
-                <Card>Amanda</Card>
-                <Card>Cristina</Card>
-                <Card>Daiane</Card>
+                <Card>
+                    <Link to="/amanda">Amanda</Link>
+                 </Card>
+                <Card>
+                    <Link to="/cristina">Cristina</Link>
+                </Card>
+                <Card>
+                    <Link to="/daiane">Daiane</Link>
+                </Card>
            
             </div>
             <div class="linha2">
-                <Card>Kevin</Card>
-                <Card>Thais</Card>
+                <Card>
+                    <Link to="/kevin">Kevin</Link>
+                </Card>
+                <Card>
+                    <Link to="/thais">Thais</Link>
+                </Card>
 
         </div>
         <div class="pontos">

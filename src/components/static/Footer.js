@@ -13,12 +13,10 @@ import {
 } from '../../shared/DesignTokens';
 
     const Container = styled.div`
-        width:100%
+        width:100%;
         height:100%;
         background: ${Colors.BLACK_450};
         padding: 10%;
-        margin: -3%;
-
         .texto{
             margin-top: 2%;
             text-align:center;
