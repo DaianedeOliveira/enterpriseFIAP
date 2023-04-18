@@ -82,9 +82,9 @@ const Container = styled.div`
 .card2{
     width: 50%;
     height: 579px;
-    padding: 2%;
+    padding: 5%;
     position: relative;
-    margin-left: 15%;
+    margin-left: 10%;
     text-align:center;
     background: ${Colors.BLUE_450};
     border-radius: ${BorderRadiuses.ONE};
@@ -216,8 +216,15 @@ function Daiane(){
                 Formação
             </Title2>
         </div>
+<<<<<<< Updated upstream
         <div className="linha2">
+=======
+        <div class="linha2">
+            <div>
+
+>>>>>>> Stashed changes
             <img src="https://i.imgur.com/x46p4eQ.png"></img>
+            </div>
 
 
              <div className="card1">Formação Daiane</div>
