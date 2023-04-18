@@ -3,7 +3,6 @@ import styled from "styled-components";
 import {Title2, Title4} from '../../assets/commom-components/Titles/Title';
 import {Button} from '../../assets/commom-components/Button/Button'; 
 import axios from "axios";
-// import useAxios from '../../../hooks/useAxios'
 import useAxios from "axios-hooks";
 import {
 	BorderRadiuses,
@@ -156,15 +155,6 @@ function Daiane(){
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error!</p>;
 
-    // const [data, setData] = useState([]);
-
-    // useEffect(() => {
-    //     if (response !== null) {
-    //         console.log(response);
-    //         setData(response);
-    //     }
-    // }, [response]);
-
     return(
         <Container>
         <Title2>Sobre</Title2>
@@ -184,9 +174,9 @@ function Daiane(){
                 <p>Meu CEP {cep}:</p>      
                 
                 </div>
-                <Button onClick={mostrarEndereco ? ocultarEndereco : refetch}>Exibir meu Endereço</Button>
-                {/* <button onClick={refetch}>Exibir meu CEP {cep}</button> */}
-                {/* <pre>{JSON.stringify(data, null, 2)}</pre> */}
+                <Button onClick={mostrarEndereco ? ocultarEndereco : refetch}>
+                {mostrarEndereco ? 'Ocultar meu Endereço' : 'Exibir meu Endereço'}    
+                </Button>
                 {mostrarEndereco && (
                     <div>                    
                         <div>{data && <p>Logadouro: {data.logradouro}</p>}</div>
@@ -195,15 +185,6 @@ function Daiane(){
                         <div>{data && <p>Estado: {data.uf}</p>}</div>
                     </div>
                 )}
-                {/* <div>{data && <p>Meu CEP: {data.cep}</p>}</div> */}
-                {/* <div>{data && <p>Logadouro: {data.logradouro}</p>}</div>
-                <div>{data && <p>Complemento: {data.complemento}</p>}</div>
-                <div>{data && <p>Cidade: {data.localidade}</p>}</div>
-                <div>{data && <p>Estado: {data.uf}</p>}</div> */}
-                {/* <div>{data && <p>{data.ibge}</p>}</div>
-                <div>{data && <p>{data.gia}</p>}</div>
-                <div>{data && <p>{data.ddd}</p>}</div>
-                <div>{data && <p>{data.siafi}</p>}</div> */}
             </div>
         </div>
 
