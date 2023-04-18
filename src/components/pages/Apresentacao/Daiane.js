@@ -1,10 +1,8 @@
 import { useState, useEffect, React } from "react";
 import styled from "styled-components";
 import {Title2, Title4} from '../../assets/commom-components/Titles/Title';
-import {Button} from '../../assets/commom-components/Button/Button'; 
 import axios from "axios";
-// import useAxios from '../../../hooks/useAxios'
-import useAxios from "axios-hooks";
+import useAxios from '../../../hooks/useAxios'
 import {
 	BorderRadiuses,
 	Colors,
@@ -134,36 +132,20 @@ axios.defaults.baseURL = "https://viacep.com.br/ws";
 
 function Daiane(){        
     const [cep, setCep] = useState('01001000');
-    const [mostrarEndereco, setMostrarEndereco] = useState(false);
 
-    const ocultarEndereco = () => {
-        setMostrarEndereco(false);
-    };
-
-    const [{ data, loading, error}, refetch ] = useAxios(
-        "https://viacep.com.br/ws/01001000/json/",
-        { manual: true },
-    );
+    const { response, loading, error } = useAxios({
+        method: 'get',
+        url: `/${cep}/json/`,
+        headers: JSON.stringify({ accept: '*/*' }),
+    });
+    const [data, setData] = useState([]);
 
     useEffect(() => {
-        if (data) {
-        setMostrarEndereco(true);
-        console.log(data);
-        console.log(mostrarEndereco);
+        if (response !== null) {
+            console.log(response);
+            setData(response);
         }
-    }, [data]);
-
-    if (loading) return <p>Loading...</p>;
-    if (error) return <p>Error!</p>;
-
-    // const [data, setData] = useState([]);
-
-    // useEffect(() => {
-    //     if (response !== null) {
-    //         console.log(response);
-    //         setData(response);
-    //     }
-    // }, [response]);
+    }, [response]);
 
     return(
         <Container>
@@ -179,36 +161,21 @@ function Daiane(){
                 FIAP. Sou uma pessoa bastante curiosa e adoro aprender coisas novas; uma das coisas que mais gosto de fazer no tempo 
                 livre é ler livros, acredito que assim como Platão - filósofo grego da antiguidade - defendia que: 
                 “livros dão alma ao universo, asas para a mente, voo para a imaginação, e vida a tudo”.  </p>
-                
-                <div>        
-                <p>Meu CEP {cep}:</p>      
-                
-                </div>
-                <Button onClick={mostrarEndereco ? ocultarEndereco : refetch}>Exibir meu Endereço</Button>
-                {/* <button onClick={refetch}>Exibir meu CEP {cep}</button> */}
-                {/* <pre>{JSON.stringify(data, null, 2)}</pre> */}
-                {mostrarEndereco && (
-                    <div>                    
-                        <div>{data && <p>Logadouro: {data.logradouro}</p>}</div>
-                        <div>{data && <p>Complemento: {data.complemento}</p>}</div>
-                        <div>{data && <p>Cidade: {data.localidade}</p>}</div>
-                        <div>{data && <p>Estado: {data.uf}</p>}</div>
-                    </div>
-                )}
-                {/* <div>{data && <p>Meu CEP: {data.cep}</p>}</div> */}
-                {/* <div>{data && <p>Logadouro: {data.logradouro}</p>}</div>
-                <div>{data && <p>Complemento: {data.complemento}</p>}</div>
-                <div>{data && <p>Cidade: {data.localidade}</p>}</div>
-                <div>{data && <p>Estado: {data.uf}</p>}</div> */}
-                {/* <div>{data && <p>{data.ibge}</p>}</div>
-                <div>{data && <p>{data.gia}</p>}</div>
-                <div>{data && <p>{data.ddd}</p>}</div>
-                <div>{data && <p>{data.siafi}</p>}</div> */}
             </div>
         </div>
+        <div>Esse é meu CEP: {cep}</div>
+        <div>{data && <p>{data.cep}</p>}</div>
+        <div>{data && <p>{data.logradouro}</p>}</div>
+        <div>{data && <p>{data.complemento}</p>}</div>
+        <div>{data && <p>{data.localidade}</p>}</div>
+        <div>{data && <p>{data.uf}</p>}</div>
+        <div>{data && <p>{data.ibge}</p>}</div>
+            <div>{data && <p>{data.gia}</p>}</div>
+            <div>{data && <p>{data.ddd}</p>}</div>
+            <div>{data && <p>{data.siafi}</p>}</div>
 
-       <div className="formacao">
-       <img src="https://i.imgur.com/Knal5Sh.png"></img>
+        <div className="formacao">
+        <img src="https://i.imgur.com/Knal5Sh.png"></img>
 
         <div className="linha1">
             <Title2>
@@ -216,53 +183,53 @@ function Daiane(){
                 Formação
             </Title2>
         </div>
-        <div className="linha2">
-            <img src="https://i.imgur.com/x46p4eQ.png"></img>
+            <div className="linha2">
+                <img src="https://i.imgur.com/x46p4eQ.png"></img>
 
 
-             <div className="card1">Formação Daiane</div>
+                <div className="card1">Formação Daiane</div>
 
 
-            <div className="card2">Olá, me chamo Daiane, tenho 18 anos, sou brasileira e me identifico com o gênero feminino. 
-            Sou apaixonada por tecnologia e tudo o que ela pode proporcionar, por isso, atualmente faço Sistemas para Internet na FIAP. Além disso, tenho como interesse a área de Business Intelligence, pois atualmente faço estágio na área e me encantou tudo que essa área propõe, assim venho participando de eventos na área e  fazendo cursos on-line para me aprimorar, como recentemente, finalizei a formação em PowerBI na Alura. Ademais, um dos meus objetivos é realizar uma pós-graduação em Data Analytics.</div>
+                <div className="card2">Olá, me chamo Daiane, tenho 18 anos, sou brasileira e me identifico com o gênero feminino. 
+                Sou apaixonada por tecnologia e tudo o que ela pode proporcionar, por isso, atualmente faço Sistemas para Internet na FIAP. Além disso, tenho como interesse a área de Business Intelligence, pois atualmente faço estágio na área e me encantou tudo que essa área propõe, assim venho participando de eventos na área e  fazendo cursos on-line para me aprimorar, como recentemente, finalizei a formação em PowerBI na Alura. Ademais, um dos meus objetivos é realizar uma pós-graduação em Data Analytics.</div>
 
-</div>
+    </div>
 
-       </div>
-
-       <div className="experiencias">
-        <div className="titulo1">
-
-        <Title2><img src="https://i.imgur.com/IuD8mKo.png"></img>Experiências<img src="https://i.imgur.com/IuD8mKo.png"></img></Title2>
         </div>
-        <div className="text">
-            <ul>
-                <li>Estagiária de Business Intelligence</li>
-                <li> Voluntária no UNICEF Brasil : Em meio à pandemia do novo coronavírus, o UNICEF trabalha com adolescentes e jovens que atuem ativamente nas redes sociais enfrentando notícias falsas e promovendo os direitos de crianças e adolescentes.</li>
-                <li>
-Voluntária no 1Mio: Através do voluntário do UNICEF, eu também participei da iniciativa 1Mio, na qual tive como funções: compartilhar informações nas redes sociais, engajar nas publicações do 1Mio e participar de projetos e lives dentro da plataforma Discord.</li>
-                <li>Embaixadora DioCampusExpert - 2022</li>
-                <li>Bootcamp Code Like  a Girls e Decola Tech oferecidos na plataforma DIO.</li>
-                <li> Em 2022, eu fui entre das 200 mulheres selecionadas para receber mentoria de carreira na Alumna </li>
-            </ul>
-        </div>
-       </div>
 
-       <div className="hobbies">
-        <Title2>Hobbies</Title2>
+        <div className="experiencias">
+            <div className="titulo1">
 
-        <Card3>
-            <div className="card4">
-                <p>Daiane: Um dos meus hobbies favoritos é ler livros, amo livros de romance, desenvolvimento pessoal e ficção científica, também tenho como hobby desenhar e aprender sobre diferentes culturas. Gosto de assistir sobre viagens e conhecer diferentes lugares.  
-
-</p>
+            <Title2><img src="https://i.imgur.com/IuD8mKo.png"></img>Experiências<img src="https://i.imgur.com/IuD8mKo.png"></img></Title2>
             </div>
-        </Card3>
+            <div className="text">
+                <ul>
+                    <li>Estagiária de Business Intelligence</li>
+                    <li> Voluntária no UNICEF Brasil : Em meio à pandemia do novo coronavírus, o UNICEF trabalha com adolescentes e jovens que atuem ativamente nas redes sociais enfrentando notícias falsas e promovendo os direitos de crianças e adolescentes.</li>
+                    <li>
+    Voluntária no 1Mio: Através do voluntário do UNICEF, eu também participei da iniciativa 1Mio, na qual tive como funções: compartilhar informações nas redes sociais, engajar nas publicações do 1Mio e participar de projetos e lives dentro da plataforma Discord.</li>
+                    <li>Embaixadora DioCampusExpert - 2022</li>
+                    <li>Bootcamp Code Like  a Girls e Decola Tech oferecidos na plataforma DIO.</li>
+                    <li> Em 2022, eu fui entre das 200 mulheres selecionadas para receber mentoria de carreira na Alumna </li>
+                </ul>
+            </div>
+        </div>
+
+        <div className="hobbies">
+            <Title2>Hobbies</Title2>
+
+            <Card3>
+                <div className="card4">
+                    <p>Daiane: Um dos meus hobbies favoritos é ler livros, amo livros de romance, desenvolvimento pessoal e ficção científica, também tenho como hobby desenhar e aprender sobre diferentes culturas. Gosto de assistir sobre viagens e conhecer diferentes lugares.  
+
+    </p>
+                </div>
+            </Card3>
 
 
-       </div>
-    </Container>
-    );
-}
+        </div>
+        </Container>
+        );
+    }
 
-export default Daiane;
+    export default Daiane;

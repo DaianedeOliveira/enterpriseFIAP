@@ -32,20 +32,13 @@ export const Title = styled.h1`
         text-align: center;
     `;
 
-<<<<<<< HEAD
     export const Title3 = styled.h2`
         font-size: ${FontSizes.ONE_QUARTER};
         color: ${Colors.BLUE_500};
         font-weight: ${FontWeights.BOLD};
         text-align: center;
     `;
-=======
-export const Title3 = styled.h2`
-     font-size: ${FontSizes.ONE_QUARTER};
-     color: ${Colors.BLUE_500};
-     font-weight: ${FontWeights.BOLD};
-     text-align: center;
-`;
+
 export const Title4 = styled.h3`
     font-size: ${FontSizes.ONE_HALF};
     color: ${Colors.BLUE_500};
@@ -53,4 +46,3 @@ export const Title4 = styled.h3`
     font-family:${FontFamilies.PRIMARY};
     text-align: left;
 `
->>>>>>> 34d3255341e334587e841b94ca1af4bce7594fe1
