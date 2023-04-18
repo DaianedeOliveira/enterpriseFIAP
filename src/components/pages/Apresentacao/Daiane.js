@@ -108,6 +108,10 @@ const Container = styled.div`
         display:flex;
         width:100%;
     }
+    .experiencias img{
+        margin:0 2%;
+        width: 35%;
+    }
     .text li{
         color:${Colors.NEUTRAL_WHITE};
         font-size:${FontSizes.ONE_HALF};
@@ -115,14 +119,17 @@ const Container = styled.div`
         font-weight:${FontWeights.SEMIBOLD};
         margin: ${Spaces.FOUR};
     }
+    .menina-sentada{
+        position:absolute;
+    }
 `;
 
 const Card3 = styled.div`
     width: 100%;
-    height: 100%;
+    height: 350px;
     background: ${Colors.BLUE_450};
     border-radius: ${BorderRadiuses.ONE};
-    margin: ${Spaces.HALF};
+    margin: 5% 0;
     color: ${Colors.NEUTRAL_WHITE};
     font-weight: ${FontWeights.BOLD};
     font-size: ${FontSizes.ONE_QUARTER};
@@ -131,7 +138,11 @@ const Card3 = styled.div`
     justify-content: center;
     .card4{
         width:75%;
-        height:100%;
+        height: 75%;
+        border-radius: 25px;
+        padding: 5%;
+        font-weight:${FontWeights.SEMIBOLD};
+        font-size:${FontSizes.ONE_HALF};
         background:${Colors.BLACK_500};
     }
 `
@@ -175,10 +186,15 @@ function Daiane(){
                 FIAP. Sou uma pessoa bastante curiosa e adoro aprender coisas novas; uma das coisas que mais gosto de fazer no tempo 
                 livre é ler livros, acredito que assim como Platão - filósofo grego da antiguidade - defendia que: 
                 “livros dão alma ao universo, asas para a mente, voo para a imaginação, e vida a tudo”.  </p>
-                
                 <div>        
+                <div class="endereco">
+                    <Title4>Endereço</Title4>
+                </div>    
+
+                <div className="cep">
+
                 <p>Meu CEP {cep}:</p>      
-                
+                </div>
                 </div>
                 <Button onClick={mostrarEndereco ? ocultarEndereco : refetch}>
                 {mostrarEndereco ? 'Ocultar meu Endereço' : 'Exibir meu Endereço'}    
@@ -245,7 +261,6 @@ Voluntária no 1Mio: Através do voluntário do UNICEF, eu também participei da
 </p>
             </div>
         </Card3>
-
 
        </div>
     </Container>
