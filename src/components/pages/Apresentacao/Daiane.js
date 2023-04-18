@@ -203,6 +203,7 @@ function Daiane(){
                     <div>                    
                         <div>{data && <p>Logadouro: {data.logradouro}</p>}</div>
                         <div>{data && <p>Complemento: {data.complemento}</p>}</div>
+                        <div>{data && <p>Bairro: {data.bairro}</p>}</div>
                         <div>{data && <p>Cidade: {data.localidade}</p>}</div>
                         <div>{data && <p>Estado: {data.uf}</p>}</div>
                     </div>
