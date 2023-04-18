@@ -18,7 +18,7 @@ const Container = styled.div`
     width:100%;
     hright: 100%;
     background: ${Colors.BLACK_450};
-    padding: 5%;
+    padding: 6%;
     .sobre{
     margin-top: 5%;
     display:flex;
