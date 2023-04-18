@@ -179,8 +179,9 @@ function Daiane(){
                 FIAP. Sou uma pessoa bastante curiosa e adoro aprender coisas novas; uma das coisas que mais gosto de fazer no tempo 
                 livre é ler livros, acredito que assim como Platão - filósofo grego da antiguidade - defendia que: 
                 “livros dão alma ao universo, asas para a mente, voo para a imaginação, e vida a tudo”.  </p>
-                
                 <div>        
+             <div>
+
                 <p>Meu CEP {cep}:</p>      
                 
                 </div>
@@ -205,6 +206,7 @@ function Daiane(){
                 <div>{data && <p>{data.ddd}</p>}</div>
                 <div>{data && <p>{data.siafi}</p>}</div> */}
             </div>
+             </div>       
         </div>
 
        <div className="formacao">
@@ -216,13 +218,9 @@ function Daiane(){
                 Formação
             </Title2>
         </div>
-<<<<<<< Updated upstream
         <div className="linha2">
-=======
-        <div class="linha2">
             <div>
 
->>>>>>> Stashed changes
             <img src="https://i.imgur.com/x46p4eQ.png"></img>
             </div>
 
@@ -233,7 +231,7 @@ function Daiane(){
             <div className="card2">Olá, me chamo Daiane, tenho 18 anos, sou brasileira e me identifico com o gênero feminino. 
             Sou apaixonada por tecnologia e tudo o que ela pode proporcionar, por isso, atualmente faço Sistemas para Internet na FIAP. Além disso, tenho como interesse a área de Business Intelligence, pois atualmente faço estágio na área e me encantou tudo que essa área propõe, assim venho participando de eventos na área e  fazendo cursos on-line para me aprimorar, como recentemente, finalizei a formação em PowerBI na Alura. Ademais, um dos meus objetivos é realizar uma pós-graduação em Data Analytics.</div>
 
-</div>
+    </div>
 
        </div>
 
