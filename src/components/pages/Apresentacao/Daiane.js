@@ -19,7 +19,7 @@ const Container = styled.div`
     width:100%;
     hright: 100%;
     background: ${Colors.BLACK_450};
-    padding: 5%;
+    padding: 10%;
     .sobre{
     margin-top: 5%;
     display:flex;
@@ -62,14 +62,15 @@ const Container = styled.div`
 }
 .card1{
     width: 40%;
+    max-width: 550px;
     height: 579px;
-    padding: 15%;
+    padding: 10%;
     text-align:center;
     position:absolute;
     z-index:99;
     background: ${Colors.BLUE_450};
     border-radius: ${BorderRadiuses.ONE};
-    margin-left: 35%;
+    margin-left: 30%;
     color: ${Colors.NEUTRAL_WHITE};
     font-weight: ${FontWeights.BOLD};
     font-size: ${FontSizes.THREE};
@@ -82,7 +83,7 @@ const Container = styled.div`
 
 &:hover .card1{
     display:none;
-    transition: 5s;
+    transition-delay: 10s;
 }
 .card2{
     width: 50%;
@@ -102,6 +103,7 @@ const Container = styled.div`
     justify-content: center;
 }
     .experiencias{
+        margin: 10% 0;
         width:100%;
     }
     .titulo1{
@@ -110,7 +112,7 @@ const Container = styled.div`
     }
     .experiencias img{
         margin:0 2%;
-        width: 35%;
+        width: 30%;
     }
     .text li{
         color:${Colors.NEUTRAL_WHITE};
@@ -119,13 +121,29 @@ const Container = styled.div`
         font-weight:${FontWeights.SEMIBOLD};
         margin: ${Spaces.FOUR};
     }
-    .menina-sentada{
+    .hobbies{
+        width: 100%;
+        height: 100%;
+        margin-top: 5%;
+    }
+    .hobbies .white-line1{
+        margin-bottom: -2%;
+        margin-right:2%;
+    }
+    .hobbies .white-line2{
+        margin-bottom: 3%;
+        margin-left: 2%;
+    }
+    .hobbies .menina-sentada{
         position:absolute;
+        margin-left: 45%;
+        
     }
 `;
 
 const Card3 = styled.div`
     width: 100%;
+    max-width: 550px;
     height: 350px;
     background: ${Colors.BLUE_450};
     border-radius: ${BorderRadiuses.ONE};
@@ -178,7 +196,7 @@ function Daiane(){
 
         <div className="sobre">
             <div className="img-sobre">
-                <img src="https://i.imgur.com/UE0J3Ur.png"></img>
+                <img src="https://i.imgur.com/UE0J3Ur.png" alt="Foto da Daiane - Uma mulher de 18 anos com cabelos e olhos castanhos, ela está sorrindo leve na foto e está posicionada de perfil"></img>
             </div>
             <div className="texto">
                 <Title4>Daiane</Title4>
@@ -221,7 +239,7 @@ function Daiane(){
             </Title2>
         </div>
         <div className="linha2">
-            <img src="https://i.imgur.com/x46p4eQ.png"></img>
+            <img src="https://i.imgur.com/x46p4eQ.png" alt="Desenho de uma garota em pé sorrindo e segurando livros nas mãos"></img>
 
 
              <div className="card1">Formação Daiane</div>
@@ -253,13 +271,13 @@ Voluntária no 1Mio: Através do voluntário do UNICEF, eu também participei da
        </div>
 
        <div className="hobbies">
-        <Title2>Hobbies</Title2>
+        <Title2><img src="https://i.imgur.com/PmHe8zV.png" className="white-line1"></img>Hobbies<img src="https://i.imgur.com/Ok0q8JI.png" className="white-line2"></img></Title2>
 
         <Card3>
             <div className="card4">
                 <p>Daiane: Um dos meus hobbies favoritos é ler livros, amo livros de romance, desenvolvimento pessoal e ficção científica, também tenho como hobby desenhar e aprender sobre diferentes culturas. Gosto de assistir sobre viagens e conhecer diferentes lugares.  
-
-</p>
+                </p>
+                <img src="https://i.imgur.com/tmxm7Ry.png" class="menina-sentada" alt="Desenho de uma garota sentada no chão com um violão no colo e fazendo sinal da paz com a mão esquerda"></img>
             </div>
         </Card3>
 

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import{Title3} from '../assets/commom-components/Titles/Title';
+import{Title3, Title5} from '../assets/commom-components/Titles/Title';
 import {
 	BorderRadiuses,
 	Colors,
@@ -36,6 +36,9 @@ import {
             display: flex;
             justify-content: center;
         }
+        .fasedois{
+            margin-top: 5%;
+        }
     
     `;
 
@@ -60,6 +63,10 @@ function Footer(){
             <img src="https://i.imgur.com/Knal5Sh.png"></img>
         </div>
 
+        <div className="fasedois">
+        <Title5>@FaseDois</Title5>
+        <Title5>2023</Title5>
+        </div>
     </Container>
  );
 }

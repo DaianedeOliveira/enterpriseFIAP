@@ -45,3 +45,12 @@ export const Title4 = styled.h3`
     font-family:${FontFamilies.PRIMARY};
     text-align: left;
 `
+export const Title5 = styled.h4`
+
+font-size: ${FontSizes.ONE};
+color: ${Colors.NEUTRAL_WHITE};
+font-weight: ${FontWeights.REGULAR};
+font-family:${FontFamilies.SECONDARY};
+text-align: center;
+    
+`

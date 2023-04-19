@@ -40,13 +40,13 @@ const Ul = styled.ul`
 const RightNav = ({ open }) => {
   return (
     <Ul open={open}>
-      <Link to="/Sobre"><li>Sobre</li></Link>      
-      <Link to="/Formacao"><li>Formação</li></Link>
-      <Link to="/Experiencia"><li>Experiência</li></Link>
-      <Link to="/Hobbies"><li>Hobbies</li></Link>
-      <Link to="/Contato"><li>Contato</li></Link>
+      <Link to="/Amanda"><li>Amanda</li></Link>      
+      <Link to="/Daiane"><li>Daiane</li></Link>
+      <Link to="/Cristina"><li>Cristina</li></Link>
+      <Link to="/Kevin"><li>Kevin</li></Link>
+      <Link to="/Thais"><li>Thais</li></Link>
     </Ul>
   )
 }
 
-export default RightNav
+export default RightNav;
