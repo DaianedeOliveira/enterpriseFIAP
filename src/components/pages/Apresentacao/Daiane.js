@@ -122,7 +122,7 @@ import {
             margin: ${Spaces.FOUR};
         }
         .hobbies{
-            width: 100%;
+            width: 60%;
             height: 100%;
             margin-top: 5%;
         }
@@ -155,7 +155,7 @@ import {
         align-items:center;
         justify-content: center;
         .card4{
-            width:75%;
+            width:85%;
             height: 75%;
             border-radius: 25px;
             padding: 5%;
