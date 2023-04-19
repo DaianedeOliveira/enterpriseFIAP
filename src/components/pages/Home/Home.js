@@ -83,10 +83,7 @@
                     background-opacity: 20%;
                     color: #282323;
                 }
-                .cards::focus{
-                    color:#054f77;
-                    list-style:none;
-                    text-decoration:none;
+        
                 }
         @media(max-width: 768px){
             img{
