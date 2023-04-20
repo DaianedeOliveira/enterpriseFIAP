@@ -19,6 +19,12 @@ const Ul = styled.ul`
   li {
     padding: 18px 10px;
   }
+  li:hover{
+    color: ${Colors.BLUE_450};
+    transform: scale(1.1);
+    transition: all 0.5s;
+  }
+  
   @media (max-width: 768px) {
     flex-flow: column nowrap;
     background-color: ${Colors.BLUE_450};

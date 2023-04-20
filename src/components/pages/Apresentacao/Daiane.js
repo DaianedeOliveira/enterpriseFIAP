@@ -15,65 +15,66 @@ import {
         FontWeights,
     } from '../../../shared/DesignTokens';
 
-    const Container = styled.div`
-        width:100%;
-        hright: 100%;
-        background: ${Colors.BLACK_450};
-        padding: 10%;
-        .sobre{
-        margin-top: 5%;
-        display:flex;
-        padding: 5% 15%;
-        font-size: ${FontSizes.ONE_HALF};
-        font-family: ${FontFamilies.SECONDARY};
-        font-weight:${FontWeights.BLACK};
-        color:${Colors.NEUTRAL_WHITE};
-    }
-    .img-sobre{
-        width:50%;
-    }
-    .texto{
-        width: 50%;
-        text-align: left;
-    }
-    .endereco{
-        margin-top: 5%;
-    }
-    .cep{
-        margin: 2% 0;
-    }
-    .linha1{
-        width:100%;
 
-        margin-top:5%;
-    }
-    .linha2{
-        margin-top: 10%;
-        display: flex;
-    }
-    .pont{
-        display:flex;
-        justify-content: right;
-    }
-    .pont-curv{
-        width: 320px;
-        height: 320px;
-        margin-top: -20%;
-    }
-    .card1{
-        width: 40%;
-        max-width: 550px;
-        height: 579px;
-        padding: 10%;
-        text-align:center;
-        position:absolute;
-        z-index:99;
-        background: ${Colors.BLUE_450};
-        border-radius: ${BorderRadiuses.ONE};
-        margin-left: 30%;
-        color: ${Colors.NEUTRAL_WHITE};
-        font-weight: ${FontWeights.BOLD};
-        font-size: ${FontSizes.THREE};
+const Container = styled.div`
+    width:100%;
+    hright: 100%;
+    background: ${Colors.BLACK_450};
+    padding: 10%;
+    .sobre{
+    margin-top: 5%;
+    display:flex;
+    padding: 5% 15%;
+    font-size: ${FontSizes.ONE_HALF};
+    font-family: ${FontFamilies.SECONDARY};
+    font-weight:${FontWeights.BLACK};
+    color:${Colors.NEUTRAL_WHITE};
+}
+.img-sobre{
+    width:50%;
+}
+.texto{
+    width: 50%;
+    text-align: left;
+}
+.endereco{
+    margin-top: 5%;
+}
+.cep{
+    margin: 2% 0;
+}
+.linha1{
+    width:100%;
+
+    margin-top:5%;
+}
+.linha2{
+    margin-top: 10%;
+    display: flex;
+}
+.pont{
+    display:flex;
+    justify-content: right;
+}
+.pont-curv{
+    width: 320px;
+    height: 320px;
+    margin-top: -20%;
+}
+.card1{
+    width: 40%;
+    max-width: 550px;
+    height: 579px;
+    padding: 10%;
+    text-align:center;
+    position:absolute;
+    z-index:99;
+    background: ${Colors.BLUE_450};
+    border-radius: ${BorderRadiuses.ONE};
+    margin-left: 30%;
+    color: ${Colors.NEUTRAL_WHITE};
+    font-weight: ${FontWeights.BOLD};
+    font-size: ${FontSizes.THREE};
         font-family:${FontFamilies.SECONDARY};
         text-transform: uppercase;
         display: flex;
@@ -87,6 +88,7 @@ import {
     }
     .card2{
         width: 50%;
+        max-width: 550px;
         height: 579px;
         padding: 5%;
         position: relative;
@@ -99,6 +101,7 @@ import {
         font-size: ${FontSizes.ONE_HALF};
         font-family:${FontFamilies.SECONDARY};
         display: flex;
+        flex-direction: column;
         align-items:center;
         justify-content: center;
     }
@@ -143,7 +146,6 @@ import {
 
     const Card3 = styled.div`
         width: 100%;
-        max-width: 550px;
         height: 350px;
         background: ${Colors.BLUE_450};
         border-radius: ${BorderRadiuses.ONE};
@@ -155,7 +157,7 @@ import {
         align-items:center;
         justify-content: center;
         .card4{
-            width:85%;
+            width:75%;
             height: 75%;
             border-radius: 25px;
             padding: 5%;

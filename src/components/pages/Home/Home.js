@@ -73,8 +73,7 @@
             text-align:center;
             outline:none;
             list-style: none;
-
-
+                            
                 }
 
                 .cards:hover{
@@ -83,6 +82,10 @@
                     background-opacity: 20%;
                     color: #282323;
                 }
+            .links{
+            text-decoration:none;
+
+            }
         
                 }
         @media(max-width: 768px){
@@ -118,18 +121,18 @@ function Home(){
                             <div> <Title2>Integrantes</Title2></div>
                                 <div class="linha1" id="cads">
 
-        <Link to="/Amanda"><Card className='cards'>Amanda </Card>
+        <Link to="/Amanda" className='links'><Card className='cards'>Amanda </Card>
                             </Link> 
 
-                                <Link to="/Cristina"><Card className='cards'>Cristina </Card>
+                                <Link to="/Cristina" className='links'><Card className='cards'>Cristina </Card>
                             </Link> 
-                                <Link to="/Daiane"><Card className='cards'>Daiane </Card>
+                                <Link to="/Daiane" className='links'><Card className='cards'>Daiane </Card>
                             </Link> 
                             
                                 </div>
                         <div class="linha2">
-        <Link to="/Kevin"><Card className='cards'> Kevin</Card> </Link>    
-        <Link to="/Thais"> <Card className='cards'> Thais</Card></Link> 
+        <Link to="/Kevin" className='links'><Card className='cards' > Kevin</Card> </Link>    
+        <Link to="/Thais" className='links'> <Card className='cards'> Thais</Card></Link> 
 
 
                 </div>

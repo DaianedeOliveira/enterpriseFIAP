@@ -33,5 +33,7 @@ export const Button = styled.button`
 
 	&:hover {
 		background-color: ${Colors.BLUE_550};
+        transform: scale(1.1);
+        transition: all 0.5s;
 	}
 `;
