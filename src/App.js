@@ -1,51 +1,34 @@
+import './App.css';
+import {BrowserRouter, Routes, Route} from 'react-router-dom'; 
+import { NormalizeStyles } from './shared/NormalizeStyles';
+import Home from './components/pages/Home/Home';
+import Navbar from './components/static/Navbar';
+import Footer from './components/static/Footer';
+import Amanda from './components/pages/Apresentacao/Amanda';
+import Cristina from './components/pages/Apresentacao/Cristina';
+import Daiane from './components/pages/Apresentacao/Daiane';
+import Kevin from './components/pages/Apresentacao/Kevin';
+import Thais from './components/pages/Apresentacao/Thais';
 
+export function App() {
+  return (
+    <>
+      <NormalizeStyles/>
+      <BrowserRouter>
+      <Navbar/>
+      <Routes>
+        <Route path="/" element={<Home/>}></Route>      
+        <Route path="/daiane" element={<Daiane/>}></Route>
+        <Route path="/amanda" element={<Amanda/>}></Route>
+        <Route path="/cristina" element={<Cristina/>}></Route>
+        <Route path="/kevin" element={<Kevin/>}></Route>
+        <Route path="/thais" element={<Thais/>}></Route>
+      </Routes>
+      </BrowserRouter>
+      <Footer/>
+    </>
 
-import logo from './imagens/logo.svg'
-import Header from './componentes/Header';
-import { BrowserRouter as Router } from 'react-router-dom';
-import Routes from './Routes';
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-
-
-const AppContainer = styled.div`
-  background-color: #292828;
-  overflow-x: hidden;
-  height: 100vh;
-  padding: 5px;
-`;
-
-
-const Fiap = styled.div`
-margin: 20px;
-padding-left: 10px;
-  `;
-
-  function App() {
-        return (
-            <Router>
-      
-          <AppContainer>
-          
-  <Header/> 
-          <Fiap>
-            <img src={logo} className="App-logo" alt="logo" />
-            
-    <Link to="/Amanda"><button className="button">Amanda</button></Link>
-
-    <Link to="/Amanda"><button>Daiane</button></Link>
-
-    <Link to="/Amanda"><button>Thais</button></Link>
-
-        <Link to="/Amanda"><button>Cris</button></Link>
-        
-        <Link to="/Amanda"><button>Kevin</button></Link>
-          </Fiap>
-        
-          </AppContainer>
-          <Routes />
-          </Router>
-    );
+  );
 }
 
 export default App;
